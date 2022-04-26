@@ -1,0 +1,19 @@
+.footer {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    &__link {
+        position: relative;
+        font-size: 14px;
+        line-height: 1.4;
+        display: inline-block;
+        text-align: center;
+    }
+
+    &__link::before {
+        content: url(../images/footer-link.png);
+        display: block;
+    }
+}

@@ -1,0 +1,17 @@
+<div class="quiz__step swiper-slide" data-permision="false" data-type="dropdown-check">
+  <fieldset class="quiz__fieldset">
+    <legend class="quiz__fieldset-legend" data-number="{{number}}">{{title}}</legend>
+    {{#each list}}
+    <label class="quiz__label">
+      <input class="quiz__input hidden" type="radio" name="{{../name}}"/>
+      <span class="quiz__span quiz__circle">{{this}}</span>
+    </label>
+    {{/each}}
+    <label class="quiz__label hidden-opacity" style="opacity: 0;">
+      <input class="quiz__input" type="text" name="other-radio1" autocomplete="off">
+    </label>
+  </fieldset>
+  <div class="quiz__row">
+    <button class="quiz__btn--red quiz__btn--step" disabled>На следующий шаг&nbsp;→</button>
+  </div>
+</div>

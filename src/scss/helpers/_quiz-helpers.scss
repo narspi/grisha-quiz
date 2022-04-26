@@ -1,0 +1,12 @@
+body {
+    min-height: 100vh;
+    background-color: $quiz-bg-color;
+    background-image: linear-gradient(to right,#0c0e12,#13346f);
+    color: $quiz-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    font-family: 'Montserrat', sans-serif;
+}
+

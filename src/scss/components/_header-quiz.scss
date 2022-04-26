@@ -1,0 +1,33 @@
+.header {
+    padding-top: 25px;
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    &__logo-img {
+        margin-right: 15px;
+        display: block;
+    }
+
+    &__logo-title {
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    &__description {
+        color: #9f9d9c;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+}

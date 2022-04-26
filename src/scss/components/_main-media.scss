@@ -1,0 +1,57 @@
+@media (max-width: 1200px) {
+    .top {
+        background-position: bottom right -200px;
+
+
+        &__inner {
+            width: unset;
+            max-width: 600px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .top {
+        padding: 50px 0 ;
+        background-image: url(../images/main-bg-tablet.jpg);
+        justify-content: start;
+        background-position: bottom -50px right;
+
+        &__inner {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        &__title-top {
+            font-size: 30px;
+        }
+
+        &__title-bottom {
+            font-size: 16px;
+        }
+
+        &__quiz-link {
+            width: 100%;    
+        }
+    }
+
+    .footer {
+        &__link {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .top {
+        background-position: bottom right;
+
+        &__quiz-link {
+            font-size: 16px;
+        }
+    }
+
+    .footer {
+        padding-top: 30px;
+    }
+}

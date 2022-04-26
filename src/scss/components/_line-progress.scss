@@ -1,0 +1,47 @@
+.line-progress {
+    margin-bottom: 30px;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    opacity: 0.75;
+    &__descr {
+        color: #fff;
+        font-size: 12px;
+        margin-right: 20px;
+    }
+    &__dots {
+        display: flex;
+    }
+
+    &__step {
+        width: 9px;
+        height: 9px;
+        border: 1px solid #dbdbdb;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+    }
+
+    &__step + .line-progress__step {
+        margin-left: 12px;
+    }
+
+    &__step + .line-progress__step::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        width: 13px;
+        height: 1px;
+        background-color: #dbdbdb;
+        transform: translateY(-50%);
+    }
+
+    &__step.done {
+        background-color: #dbdbdb;
+    }
+
+    &__step.active {
+        box-shadow: 0px 0px 8px 4px rgb(255 255 255 / 35%);
+    }
+}

@@ -1,0 +1,89 @@
+<section class="quiz">
+    <div class="container quiz__inner">
+        <h2 class="hidden">Квиз</h2>
+        <form class="quiz__form">
+            {{> line-progress}}
+            <div class="quiz__slider swiper">
+                <div class="quiz__slider-wrap swiper-wrapper swiper-no-swiping">
+                    {{> step-dropdown-check quiz.fieldset1}}
+                    {{> step-radio data = quiz.fieldset2}}
+                    {{> step-radio data = quiz.fieldset3}}
+                    {{> step-radio data = quiz.fieldset4}}
+                    {{> step-radio data = quiz.fieldset5}}
+                    {{> step-radio data = quiz.fieldset6}}
+                    {{> step-radio data = quiz.fieldset7}}
+                    {{> step-finish}}
+                </div>
+            </div>
+        </form>
+        <div class="quiz__info">
+            <h3 class="quiz__info-descr">Смотрите пояснения к вопросу</h3>
+            <div class="quiz__watch-block swiper" id="watch">
+                <div class="swiper-wrapper swiper-no-swiping">
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="images/watch-step-1.webp" type="image/webp">
+                            <img src="watch-step-1.png" alt="пояснения">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="images/watch-step-2.webp" type="image/webp">
+                            <img src="watch-step-2.jpg" alt="пояснения">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="images/watch-step-3.webp" type="image/webp">
+                            <img src="watch-step-3.png" alt="пояснения">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="images/watch-step-4.webp" type="image/webp">
+                            <img src="watch-step-4.jpg" alt="пояснения">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="images/watch-step-5.webp" type="image/webp">
+                            <img src="watch-step-5.jpg" alt="пояснения">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="images/watch-step-6.webp" type="image/webp">
+                            <img src="watch-step-6.png" alt="пояснения">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz__banner">
+                <div class="quiz__banner-item">
+                    <h4 class="quiz__banner-title">
+                        Гарантированный подарок
+                    </h4>
+                    <picture>
+                        <source srcset="./images/gift-1.webp" type="image/webp">
+                        <img class="quiz__banner-img" src="./images/gift-1.png" alt="закрытое видео" aria-hidden="true">
+                    </picture>
+                    <p class="quiz__banner-descr">
+                        Доступ к видео: "Как правильно оценить и учесть правовые риски в стоимости компании"
+                    </p>
+                </div>
+                <div class="quiz__banner-item">
+                    <h4 class="quiz__banner-title">
+                        Гарантированный подарок
+                    </h4>
+                    <picture>
+                        <source srcset="./images/paper.webp" type="image/webp">
+                        <img class="quiz__banner-img" src="./images/paper.png" alt="закрытое видео" aria-hidden="true">
+                    </picture>
+                    <p class="quiz__banner-descr">
+                        ЧЕК-ЛИСТ: "АУДИТ БИЗНЕСА ПО 31 ПАРАМЕТРУ, ВЛИЯЮЩИХ НА СТОИМОСТЬ КОМПАНИИ"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

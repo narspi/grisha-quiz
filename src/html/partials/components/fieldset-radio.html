@@ -1,0 +1,22 @@
+<fieldset class="quiz__fieldset{{#if closed}} disabled{{/if}}">
+    <legend class="quiz__fieldset-legend" data-number="{{number}}">{{title}}</legend>
+    {{#if no-focus}}
+      <div class="quiz__fieldset-content">
+        {{#each list}}
+          <label class="quiz__label">
+            <input class="quiz__input hidden" type="radio" name="{{../name}}" tabindex="-1"/>
+            <span class="quiz__span quiz__circle">{{this}}</span>
+          </label>
+        {{/each}}
+      </div>
+    {{else}}
+      <div class="quiz__fieldset-content">
+        {{#each list}}
+          <label class="quiz__label">
+            <input class="quiz__input hidden" type="radio" name="{{../name}}"/>
+            <span class="quiz__span quiz__circle">{{this}}</span>
+          </label>
+        {{/each}}
+      </div>
+    {{/if}}
+</fieldset>

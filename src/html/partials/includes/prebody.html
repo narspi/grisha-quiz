@@ -1,0 +1,23 @@
+<script>
+    // root --vh --widthContainer
+    let vh = window.innerHeight * 0.01; 
+
+    const doc = document.documentElement;
+    doc.style.setProperty("--vh", "".concat(vh, "px"));
+
+    window.addEventListener("resize", function () {
+      vh = window.innerHeight * 0.01;
+      doc.style.setProperty("--vh", "".concat(vh, "px"));
+    }); 
+
+    //support webp
+    function testWebP(elem) {
+      var webP = new Image();
+      webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+
+      webP.onload = webP.onerror = function () {
+        webP.height === 2 ? elem.classList.add("webp") : elem.classList.add("no-webp");
+      };
+    }
+    testWebP(doc);
+</script>
