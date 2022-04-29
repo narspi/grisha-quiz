@@ -12,10 +12,10 @@
 
 @media (max-width: 900px) {
     .top {
-        padding: 50px 0 ;
+        min-height: calc(110 * var(--vh));
         background-image: url(../images/main-bg-tablet.jpg);
         justify-content: start;
-        background-position: bottom -50px right;
+        background-position: bottom right;
 
         &__inner {
             margin: 0 auto;
@@ -31,7 +31,8 @@
         }
 
         &__quiz-link {
-            width: 100%;    
+            width: 100%;
+            border-radius: 32px;   
         }
     }
 
@@ -46,8 +47,18 @@
     .top {
         background-position: bottom right;
 
+        &__title-bottom {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
         &__quiz-link {
             font-size: 16px;
+            font-weight: 600;
+        }
+
+        &__descr {
+            color: rgba(239,242,247,.8);
         }
     }
 

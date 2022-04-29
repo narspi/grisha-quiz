@@ -168,7 +168,6 @@ document.addEventListener('DOMContentLoaded',()=>{
                 const form = target.closest('.quiz__form');
                 const steps = form.querySelectorAll('.quiz__step');
                 steps.forEach(step=>{
-                    console.log(step);
                     const typeStep = step.dataset.type;
                     const numberStep = Number(step.dataset.stepNumber);
                     if (typeStep === 'dropdown-check') {
@@ -234,11 +233,14 @@ document.addEventListener('DOMContentLoaded',()=>{
                     },
                     body: JSON.stringify(data)
                 })
-                .then(response=>response.json())
+                .then(response=>{
+                    return response.json()
+                })
                 .then(answer=>{
                     if (answer.ok === true) window.location.href = `${answer.page}`;
                     else alert('Упс что то пошлоне так. Попробуйте позже');
-                });
+                })
+                .catch(err => alert('Возможно нет соединения'));
             }
 
         }
